@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skins Gallery | FragPunk Fan Experience</title>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+            background: var(--color-surface);
+            aspect-ratio: 16/9;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: var(--spacing-md);
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+            transform: translateY(100%);
+            transition: transform var(--transition-normal);
+            pointer-events: none;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        .gallery-title {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">FRAG<span>PUNK</span></a>
+            <button class="mobile-toggle">☰</button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="lancers.html" class="nav-link">Lancers</a></li>
+                <li><a href="weapons.html" class="nav-link">Weapons</a></li>
+                <li><a href="skins.html" class="nav-link active">Skins</a></li>
+                <li><a href="news.html" class="nav-link">News</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="section" style="padding-top: 150px; padding-bottom: var(--spacing-lg);">
+        <div class="container text-center" style="text-align: center;">
+            <h1 class="fade-up">Skin Collections</h1>
+            <p class="fade-up text-muted" style="max-width: 600px; margin: 0 auto;">Stand out in the arena with premium
+                cosmetics for your favorite lancers.</p>
+        </div>
+    </header>
+
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="gallery-grid">
+                <div class="gallery-item fade-up">
+                    <img src="skins/skin-collection1.png" alt="Neon Genesis Collection">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">Neon Genesis Set</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-up" style="transition-delay: 100ms;">
+                    <img src="skins/skin-collection2.jpg" alt="Wasteland Warriors Collection">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">Wasteland Warriors Set</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item fade-up"
+                    style="transition-delay: 200ms; grid-column: 1 / -1; aspect-ratio: 21/9;">
+                    <img src="skins/skin-collection3.png" alt="Cyber Samurai Collection">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-title">Cyber Samurai Set</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: var(--spacing-xl);" class="fade-up">
+                <h3 style="color: var(--color-text); margin-bottom: var(--spacing-md);">Unlock Exclusives in Season 1
+                </h3>
+                <a href="news.html" class="btn">Read Season 1 Patch Notes</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-brand">FRAG<span>PUNK</span></div>
+            <div class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="lancers.html">Lancers</a>
+                <a href="weapons.html">Weapons</a>
+                <a href="skins.html">Skins</a>
+                <a href="news.html">News</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FragPunk Fan Hub. Not affiliated with the official game developers.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest News | FragPunk Fan Experience</title>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .news-header {
+            min-height: 50vh;
+            background: linear-gradient(rgba(9, 9, 11, 0.7), var(--color-bg)), url('site-assets/bckg3.jpg') center/cover;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+        }
+
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-lg);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .news-card {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform var(--transition-fast), border-color var(--transition-fast);
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--color-primary);
+        }
+
+        .news-image {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .news-content {
+            padding: var(--spacing-lg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .news-meta {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: var(--spacing-sm);
+            display: flex;
+            gap: var(--spacing-sm);
+            align-items: center;
+        }
+
+        .news-tag {
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-family: var(--font-display);
+        }
+
+        .tag-update {
+            background: rgba(0, 255, 204, 0.1);
+            color: var(--color-primary);
+        }
+
+        .tag-esports {
+            background: rgba(255, 0, 127, 0.1);
+            color: var(--color-secondary);
+        }
+
+        .news-title {
+            font-size: 1.8rem;
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-text);
+        }
+
+        .news-excerpt {
+            color: var(--color-text-muted);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .news-link {
+            color: var(--color-primary);
+            font-family: var(--font-display);
+            text-transform: uppercase;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .news-link:hover {
+            color: var(--color-text);
+        }
+
+        @media (max-width: 768px) {
+            .news-card {
+                grid-template-columns: 1fr;
+            }
+
+            .news-image {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">FRAG<span>PUNK</span></a>
+            <button class="mobile-toggle">☰</button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="lancers.html" class="nav-link">Lancers</a></li>
+                <li><a href="weapons.html" class="nav-link">Weapons</a></li>
+                <li><a href="skins.html" class="nav-link">Skins</a></li>
+                <li><a href="news.html" class="nav-link active">News</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="news-header">
+        <div class="container text-center" style="text-align: center;">
+            <h1 class="fade-up">Intel Hub</h1>
+            <p class="fade-up text-muted" style="max-width: 600px; margin: 0 auto;">Stay updated with the latest patch
+                notes, esports events, and community news.</p>
+        </div>
+    </header>
+
+    <section class="section" style="padding-top: var(--spacing-lg);">
+        <div class="container">
+            <div class="news-list">
+                <!-- Article 1 -->
+                <article class="news-card fade-up">
+                    <img src="site-assets/poster1.webp" alt="Season 1 Update" class="news-image">
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-tag tag-update">Update</span>
+                            <span class="text-muted">October 24, 2024</span>
+                        </div>
+                        <h2 class="news-title">Season 1: Neon Genesis drops next week</h2>
+                        <p class="news-excerpt">The wait is over. Season 1 brings a massive overhaul to the arena
+                            including the new "Cyber Slums" map, 3 new weapons added to the arsenal pool, and
+                            comprehensive balance tweaks across the entire lancer roster.</p>
+                        <a href="#" class="news-link">Read Full Intel &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="news-card fade-up">
+                    <img src="site-assets/poster2.jpg" alt="Tournament Poster" class="news-image">
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-tag tag-esports">Esports</span>
+                            <span class="text-muted">October 15, 2024</span>
+                        </div>
+                        <h2 class="news-title">Global Invitational Tournament Announced</h2>
+                        <p class="news-excerpt">Top teams from across the globe gather for the first official FragPunk
+                            championship. Watch the action live and earn exclusive twitch drops during the grand finals
+                            weekend.</p>
+                        <a href="#" class="news-link">View Brackets &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="news-card fade-up">
+                    <img src="site-assets/bckg2.jpg" alt="Lancer Tease" class="news-image">
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-tag tag-update">Teaser</span>
+                            <span class="text-muted">October 02, 2024</span>
+                        </div>
+                        <h2 class="news-title">Who is the next Lancer?</h2>
+                        <p class="news-excerpt">A series of encrypted messages have been intercepted from the outer rim.
+                            Analysis suggests a new combatant specializing in gravitational manipulation is about to
+                            enter the games.</p>
+                        <a href="#" class="news-link">Decrypt Message &rarr;</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="fade-up" style="text-align: center; margin-top: var(--spacing-xl);">
+                <button class="btn btn-outline">Load Older Intel</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-brand">FRAG<span>PUNK</span></div>
+            <div class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="lancers.html">Lancers</a>
+                <a href="weapons.html">Weapons</a>
+                <a href="skins.html">Skins</a>
+                <a href="news.html">News</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FragPunk Fan Hub. Not affiliated with the official game developers.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
