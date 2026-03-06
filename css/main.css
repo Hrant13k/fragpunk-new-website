@@ -421,7 +421,7 @@ body::before {
 
 .hero-desc {
     font-size: clamp(1rem, 1.8vw, 1.2rem);
-    color: var(--color-text-muted);
+    color: #d6d6d6;
     margin-bottom: var(--space-12);
     max-width: 560px;
     line-height: 1.75;

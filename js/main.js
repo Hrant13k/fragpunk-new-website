@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mobileToggle && navMenu) {
         mobileToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
-            // Toggle hamburger icon (optional: changing text or icon content)
+            // Toggle hamburger icon
             if (navMenu.classList.contains('active')) {
                 mobileToggle.innerHTML = '✕';
             } else {
