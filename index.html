@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FragPunk Fan Hub — the ultimate fan site for lancers, weapons, news, and more.">
     <title>FragPunk | Fan Experience</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -10,7 +11,7 @@
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="nav-brand">FRAG<span>PUNK</span></a>
-            <button class="mobile-toggle">☰</button>
+            <button class="mobile-toggle" aria-label="Toggle navigation">☰</button>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link active">Home</a></li>
                 <li><a href="lancers.html" class="nav-link">Lancers</a></li>
@@ -21,14 +22,29 @@
         </div>
     </nav>
 
-    <header class="hero" style="background: linear-gradient(rgba(9,9,11,0.6), rgba(9,9,11,0.5)), url('site-assets/bckg1.jpg') center/cover; background-attachment: fixed;">
+    <header class="hero" style="background: linear-gradient(rgba(6,6,8,0.65), rgba(6,6,8,0.55)), url('site-assets/bckg1.jpg') center/cover no-repeat; background-attachment: fixed;">
         <div class="container">
             <div class="hero-content fade-up">
-                <h1>Rule the Arena</h1>
-                <p class="hero-desc">Experience the ultimate fast-paced hero shooter. Bend the rules, choose your lancer, and dominate the match with game-changing cards.</p>
+                <p class="hero-eyebrow">Season 01 — Live Now</p>
+                <h1>Rule the<br><em>Arena</em></h1>
+                <p class="hero-desc">Experience the ultimate fast-paced hero shooter. Bend the rules, choose your lancer, and dominate the match with game-changing card draws.</p>
                 <div class="hero-actions">
                     <a href="lancers.html" class="btn">Meet the Lancers</a>
-                    <a href="news.html" class="btn btn-outline">Read Latest Intel</a>
+                    <a href="news.html" class="btn btn-outline">Latest Intel</a>
+                </div>
+                <div class="hero-stats">
+                    <div>
+                        <div class="hero-stat-value">13+</div>
+                        <div class="hero-stat-label">Lancers</div>
+                    </div>
+                    <div>
+                        <div class="hero-stat-value">40+</div>
+                        <div class="hero-stat-label">Shard Cards</div>
+                    </div>
+                    <div>
+                        <div class="hero-stat-value">5v5</div>
+                        <div class="hero-stat-label">Team Battles</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -36,9 +52,9 @@
 
     <section class="section">
         <div class="container">
-            <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: var(--spacing-lg);">
-                <h2 class="fade-up" style="margin-bottom: 0;">Featured Lancers</h2>
-                <a href="lancers.html" class="btn btn-outline fade-up">View All roster</a>
+            <div class="section-header">
+                <h2 class="fade-up">Featured Lancers</h2>
+                <a href="lancers.html" class="btn btn-outline fade-up">View Full Roster</a>
             </div>
             <div class="grid">
                 <a href="lancer-detail.html" class="card fade-up">
@@ -48,6 +64,7 @@
                     <div class="card-content">
                         <h3 class="card-title">Jaguar</h3>
                         <p class="text-muted">Master of stealth and precision strikes.</p>
+                        <span class="card-role">Assassin</span>
                     </div>
                 </a>
                 <a href="lancer-detail.html" class="card fade-up" style="transition-delay: 100ms;">
@@ -57,6 +74,7 @@
                     <div class="card-content">
                         <h3 class="card-title">Broker</h3>
                         <p class="text-muted">High-stakes tactician with explosive payloads.</p>
+                        <span class="card-role">Tactician</span>
                     </div>
                 </a>
                 <a href="lancer-detail.html" class="card fade-up" style="transition-delay: 200ms;">
@@ -66,38 +84,40 @@
                     <div class="card-content">
                         <h3 class="card-title">Chum</h3>
                         <p class="text-muted">Heavy support and frontline damage dealer.</p>
+                        <span class="card-role">Support</span>
                     </div>
                 </a>
             </div>
         </div>
     </section>
 
+    <div class="section-divider"></div>
+
     <section class="section" style="background: var(--color-surface-light);">
         <div class="container">
-            <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: var(--spacing-lg);">
-                <h2 class="fade-up" style="margin-bottom: 0;">Latest News</h2>
-                <a href="news.html" class="btn btn-outline fade-up">View All Intel</a>
+            <div class="section-header">
+                <h2 class="fade-up">Latest News</h2>
+                <a href="news.html" class="btn btn-outline fade-up">All Intel</a>
             </div>
-            
             <div class="grid" style="grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));">
                 <a href="news.html" class="card fade-up">
-                    <div class="card-image-wrap" style="height: 250px;">
+                    <div class="card-image-wrap" style="height: 240px;">
                         <img src="site-assets/poster1.webp" alt="Season 1 Update" class="card-image">
                     </div>
                     <div class="card-content">
-                        <span class="text-muted" style="font-size: 0.8rem; text-transform: uppercase; color: var(--color-primary);">Update • Oct 24, 2024</span>
-                        <h3 class="card-title" style="margin-top: 0.5rem;">Season 1: Neon Genesis drops next week</h3>
-                        <p class="text-muted">Discover new map changes, 3 new weapons, and balance tweaks across all lancers.</p>
+                        <span class="card-role" style="--color-primary: var(--color-primary);">Update &bull; Oct 24, 2024</span>
+                        <h3 class="card-title" style="margin-top: 0.25rem; font-size: 1.3rem;">Season 1: Neon Genesis drops next week</h3>
+                        <p class="text-muted" style="font-size: 0.9rem;">New map, 3 new weapons, and balance tweaks across all lancers.</p>
                     </div>
                 </a>
                 <a href="news.html" class="card fade-up" style="transition-delay: 100ms;">
-                    <div class="card-image-wrap" style="height: 250px;">
+                    <div class="card-image-wrap" style="height: 240px;">
                         <img src="site-assets/poster2.jpg" alt="Tournament Poster" class="card-image">
                     </div>
                     <div class="card-content">
-                        <span class="text-muted" style="font-size: 0.8rem; text-transform: uppercase; color: var(--color-secondary);">Esports • Oct 15, 2024</span>
-                        <h3 class="card-title" style="margin-top: 0.5rem;">Global Invitational Announced</h3>
-                        <p class="text-muted">Top teams from across the globe gather for the first official FragPunk championship.</p>
+                        <span class="card-role" style="background: var(--color-secondary-dim); border-color: rgba(255,45,110,0.2); color: var(--color-secondary);">Esports &bull; Oct 15, 2024</span>
+                        <h3 class="card-title" style="margin-top: 0.25rem; font-size: 1.3rem;">Global Invitational Announced</h3>
+                        <p class="text-muted" style="font-size: 0.9rem;">Top teams from across the globe compete in the first official FragPunk championship.</p>
                     </div>
                 </a>
             </div>
@@ -106,16 +126,18 @@
 
     <footer class="footer">
         <div class="container">
-            <div class="footer-brand">FRAG<span>PUNK</span></div>
-            <div class="footer-nav">
-                <a href="index.html">Home</a>
-                <a href="lancers.html">Lancers</a>
-                <a href="weapons.html">Weapons</a>
-                <a href="skins.html">Skins</a>
-                <a href="news.html">News</a>
+            <div class="footer-inner">
+                <div class="footer-brand">FRAG<span>PUNK</span></div>
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <a href="index.html">Home</a>
+                    <a href="lancers.html">Lancers</a>
+                    <a href="weapons.html">Weapons</a>
+                    <a href="skins.html">Skins</a>
+                    <a href="news.html">News</a>
+                </nav>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 FragPunk Fan Hub. Not affiliated with the official game developers.</p>
+                <p>&copy; 2024 FragPunk Fan Hub &mdash; Not affiliated with the official game developers.</p>
             </div>
         </div>
     </footer>
