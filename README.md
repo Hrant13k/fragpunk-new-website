@@ -6,6 +6,12 @@ A fully hand-coded fan-made redesign of the [FragPunk](https://www.fragpunk.com)
 
 ---
 
+## Live Preview
+
+https://hrant13k.github.io/fragpunk-new-website/index.html
+
+---
+
 ## Overview
 
 This project reimagines the FragPunk website from the ground up using vanilla HTML, CSS, and JavaScript — no frameworks, no build tools. Every layout, animation, and interaction was crafted by hand to match the high-energy aesthetic of the game while improving on the original's structure and readability.
